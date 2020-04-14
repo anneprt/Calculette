@@ -14,12 +14,26 @@ public class Main {
 
         System.out.println("Entrer la première valeur:");
         a = lectureClavier.nextInt();
-
         System.out.println("Entrer la seconde valeur:");
         b = lectureClavier.nextInt();
-
         System.out.println("Type de l'opération (+,-,/,*)");
         operateur = lectureClavier.next().charAt(0);
+
+        switch (operateur) {
+            case '+':
+                calcul = a + b;
+                break;
+            case '-':
+                calcul = a - b;
+                break;
+            case '/':
+                calcul = a / b;
+                break;
+            case '*':
+                calcul = a * b;
+                break;
+        }
+        System.out.println("Cette opération a pour résultat: " + a + operateur + b + "=" + calcul);
 
     }
 }
