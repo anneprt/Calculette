@@ -9,6 +9,7 @@ public class Main {
         int b;
         char operateur;
         double calcul = 0;
+        boolean OK = true;
 
         Scanner lectureClavier = new Scanner(System.in);
 
@@ -19,6 +20,7 @@ public class Main {
         System.out.println("Type de l'opération (+,-,/,*)");
         operateur = lectureClavier.next().charAt(0);
 
+
         switch (operateur) {
             case '+':
                 calcul = a + b;
@@ -27,13 +29,26 @@ public class Main {
                 calcul = a - b;
                 break;
             case '/':
-                calcul = a / b;
+                if (b != 0) {
+                    calcul = a / b;
+                } else {
+                    OK = false;
+                }
                 break;
             case '*':
                 calcul = a * b;
                 break;
+            default:
+                break;
         }
-        System.out.println("Cette opération a pour résultat: " + a + operateur + b + "=" + calcul);
-
+        if (OK) {
+            System.out.println("Cette opération a pour résultat: " + a + operateur + b + "=" + calcul);
+        } else {
+            System.out.println("Opération non conforme !");
+        }
     }
+
 }
+
+
+
