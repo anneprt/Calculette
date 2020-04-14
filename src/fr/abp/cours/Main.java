@@ -11,6 +11,15 @@ public class Main {
         double calcul = 0;
 
         Scanner lectureClavier = new Scanner(System.in);
-        
+
+        System.out.println("Entrer la première valeur:");
+        a = lectureClavier.nextInt();
+
+        System.out.println("Entrer la seconde valeur:");
+        b = lectureClavier.nextInt();
+
+        System.out.println("Type de l'opération (+,-,/,*)");
+        operateur = lectureClavier.next().charAt(0);
+
     }
 }
